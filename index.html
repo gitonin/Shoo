@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SHOO Coffee — Cafés de spécialité sélectionnés à la source. Origines tracées, torréfaction artisanale, livraison 48h." />
+  <title>SHOO Coffee — Cafés de spécialité</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Snipcart — Replace YOUR_SNIPCART_PUBLIC_API_KEY with your public key from app.snipcart.com -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.3/default/snipcart.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="SHOO Coffee — Accueil">SHOO</a>
+
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#boutique" class="nav__link">Boutique</a>
+        <a href="#packs" class="nav__link">Packs</a>
+        <a href="#newsletter" class="nav__link">Newsletter</a>
+        <button class="snipcart-checkout nav__cart" aria-label="Panier">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="snipcart-items-count nav__cart-count"></span>
+        </button>
+      </nav>
+
+      <div class="nav__right-mobile">
+        <button class="snipcart-checkout nav__cart" aria-label="Panier">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="snipcart-items-count nav__cart-count"></span>
+        </button>
+        <button class="nav__burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="nav__overlay" id="navMenu" aria-hidden="true">
+      <nav class="nav__overlay-links" aria-label="Menu mobile">
+        <a href="#boutique" class="nav__overlay-link">Boutique</a>
+        <a href="#packs" class="nav__overlay-link">Packs</a>
+        <a href="#newsletter" class="nav__overlay-link">Newsletter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" aria-label="Accueil">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__circle"></div>
+        <div class="hero__steam steam--1"></div>
+        <div class="hero__steam steam--2"></div>
+        <div class="hero__steam steam--3"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__label reveal">Cafés de spécialité</p>
+        <h1 class="hero__heading reveal">L'essentiel<br /><em>dans chaque tasse.</em></h1>
+        <p class="hero__sub reveal">Sélectionnés à la source. Torréfiés avec intention.</p>
+        <a href="#boutique" class="btn btn--outline reveal">Découvrir nos cafés</a>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PHILOSOPHY STRIP
+    ============================================================ -->
+    <section class="pillars" aria-label="Nos engagements">
+      <div class="pillars__inner">
+        <div class="pillar reveal">
+          <div class="pillar__icon" aria-hidden="true">◎</div>
+          <h3 class="pillar__title">Origine tracée</h3>
+          <p class="pillar__text">Du producteur à votre tasse, chaque lot est documenté.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar__icon" aria-hidden="true">◈</div>
+          <h3 class="pillar__title">Torréfaction artisanale</h3>
+          <p class="pillar__text">Petits lots, profils sur mesure, fraîcheur garantie.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="pillar__icon" aria-hidden="true">◇</div>
+          <h3 class="pillar__title">Livraison sous 48h</h3>
+          <p class="pillar__text">Votre café part le jour même de la torréfaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GAMME ORIGINES — 3 produits
+    ============================================================ -->
+    <section class="products" id="boutique" aria-label="Gamme Origines">
+      <div class="products__header reveal">
+        <p class="section-label">Gamme</p>
+        <h2 class="section-title">Origines</h2>
+        <p class="section-sub">Trois terroirs. Trois caractères.</p>
+      </div>
+
+      <div class="products__grid">
+
+        <!-- Produit 1 — Éthiopie -->
+        <article class="product-card reveal" data-product="ethiopie">
+          <div class="product-card__visual product-card__visual--ethiopie" aria-hidden="true">
+            <div class="product-card__badge">Coup de cœur</div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__origin">Éthiopie · Yirgacheffe</p>
+            <h3 class="product-card__name">Éthiopie Yirgacheffe</h3>
+            <p class="product-card__notes">Floral · Bergamote · Miel d'acacia</p>
+            <div class="product-card__options">
+              <fieldset class="weight-selector">
+                <legend class="sr-only">Poids</legend>
+                <label class="weight-selector__pill">
+                  <input type="radio" name="weight-ethiopie" value="250" data-price="18" checked />
+                  <span>250g — 18 €</span>
+                </label>
+                <label class="weight-selector__pill">
+                  <input type="radio" name="weight-ethiopie" value="500" data-price="32" />
+                  <span>500g — 32 €</span>
+                </label>
+              </fieldset>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price" data-default="18">18 €</span>
+              <button
+                class="btn btn--primary snipcart-add-item"
+                data-item-id="ethiopie-yirgacheffe-250g"
+                data-item-name="Éthiopie Yirgacheffe 250g"
+                data-item-price="18.00"
+                data-item-url="/"
+                data-item-description="Floral, bergamote, miel d'acacia. Origine Yirgacheffe, Éthiopie."
+                data-item-weight="250"
+                data-item-image=""
+                aria-label="Ajouter Éthiopie Yirgacheffe au panier">
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produit 2 — Colombie -->
+        <article class="product-card reveal" data-product="colombie">
+          <div class="product-card__visual product-card__visual--colombie" aria-hidden="true"></div>
+          <div class="product-card__body">
+            <p class="product-card__origin">Colombie · Huila</p>
+            <h3 class="product-card__name">Colombie Huila</h3>
+            <p class="product-card__notes">Caramel · Noisette · Agrumes doux</p>
+            <div class="product-card__options">
+              <fieldset class="weight-selector">
+                <legend class="sr-only">Poids</legend>
+                <label class="weight-selector__pill">
+                  <input type="radio" name="weight-colombie" value="250" data-price="17" checked />
+                  <span>250g — 17 €</span>
+                </label>
+                <label class="weight-selector__pill">
+                  <input type="radio" name="weight-colombie" value="500" data-price="30" />
+                  <span>500g — 30 €</span>
+                </label>
+              </fieldset>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price" data-default="17">17 €</span>
+              <button
+                class="btn btn--primary snipcart-add-item"
+                data-item-id="colombie-huila-250g"
+                data-item-name="Colombie Huila 250g"
+                data-item-price="17.00"
+                data-item-url="/"
+                data-item-description="Caramel, noisette, agrumes doux. Origine Huila, Colombie."
+                data-item-weight="250"
+                aria-label="Ajouter Colombie Huila au panier">
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produit 3 — Guatemala -->
+        <article class="product-card reveal" data-product="guatemala">
+          <div class="product-card__visual product-card__visual--guatemala" aria-hidden="true"></div>
+          <div class="product-card__body">
+            <p class="product-card__origin">Guatemala · Huehuetenango</p>
+            <h3 class="product-card__name">Guatemala Huehue.</h3>
+            <p class="product-card__notes">Cacao · Épices · Fruits rouges</p>
+            <div class="product-card__options">
+              <fieldset class="weight-selector">
+                <legend class="sr-only">Poids</legend>
+                <label class="weight-selector__pill">
+                  <input type="radio" name="weight-guatemala" value="250" data-price="19" checked />
+                  <span>250g — 19 €</span>
+                </label>
+                <label class="weight-selector__pill">
+                  <input type="radio" name="weight-guatemala" value="500" data-price="34" />
+                  <span>500g — 34 €</span>
+                </label>
+              </fieldset>
+            </div>
+            <div class="product-card__footer">
+              <span class="product-card__price" data-default="19">19 €</span>
+              <button
+                class="btn btn--primary snipcart-add-item"
+                data-item-id="guatemala-huehuetenango-250g"
+                data-item-name="Guatemala Huehuetenango 250g"
+                data-item-price="19.00"
+                data-item-url="/"
+                data-item-description="Cacao, épices, fruits rouges. Origine Huehuetenango, Guatemala."
+                data-item-weight="250"
+                aria-label="Ajouter Guatemala Huehuetenango au panier">
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GAMME SIGNATURE — 1 produit
+    ============================================================ -->
+    <section class="signature" aria-label="Gamme Signature">
+      <div class="signature__inner">
+        <div class="signature__visual reveal" aria-hidden="true">
+          <div class="signature__visual-inner">
+            <div class="signature__label-float">Signature</div>
+          </div>
+        </div>
+        <div class="signature__content reveal">
+          <p class="section-label">Gamme</p>
+          <h2 class="section-title">Signature</h2>
+          <h3 class="signature__name">L'Assemblage Noir</h3>
+          <p class="signature__desc">
+            Une rencontre entre trois origines travaillées pour l'espresso.
+            Dense, rond, avec cette amertume douce qu'on recherche dans un
+            ristretto du matin. Notre réponse à ce que devrait être un café de tous les jours.
+          </p>
+          <p class="product-card__notes signature__notes">Chocolat noir · Tabac blond · Cerise mûre</p>
+          <div class="signature__buy">
+            <span class="signature__price">22 € <small>/ 250g</small></span>
+            <button
+              class="btn btn--primary snipcart-add-item"
+              data-item-id="assemblage-noir-250g"
+              data-item-name="L'Assemblage Noir 250g"
+              data-item-price="22.00"
+              data-item-url="/"
+              data-item-description="Notre espresso maison. Chocolat noir, tabac blond, cerise mûre."
+              data-item-weight="250"
+              aria-label="Ajouter L'Assemblage Noir au panier">
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PACKS DÉCOUVERTE — bundles
+    ============================================================ -->
+    <section class="packs" id="packs" aria-label="Packs découverte">
+      <div class="packs__header reveal">
+        <p class="section-label">Bundles</p>
+        <h2 class="section-title">Packs Découverte</h2>
+        <p class="section-sub">Les trois origines réunies. Le meilleur point de départ.</p>
+      </div>
+
+      <div class="packs__grid">
+
+        <!-- Pack 1 -->
+        <article class="pack-card reveal">
+          <div class="pack-card__header">
+            <span class="pack-card__tag">Essentiel</span>
+            <h3 class="pack-card__name">Trio Origines</h3>
+            <p class="pack-card__desc">Éthiopie · Colombie · Guatemala<br />250g de chaque origine</p>
+          </div>
+          <ul class="pack-card__list" aria-label="Contenu du pack">
+            <li>Éthiopie Yirgacheffe 250g</li>
+            <li>Colombie Huila 250g</li>
+            <li>Guatemala Huehuetenango 250g</li>
+          </ul>
+          <div class="pack-card__pricing">
+            <span class="pack-card__saving">Économisez 9 €</span>
+            <div class="pack-card__prices">
+              <s class="pack-card__old-price">54 €</s>
+              <strong class="pack-card__price">45 €</strong>
+            </div>
+          </div>
+          <button
+            class="btn btn--primary btn--full snipcart-add-item"
+            data-item-id="pack-trio-origines"
+            data-item-name="Pack Trio Origines — 3 × 250g"
+            data-item-price="45.00"
+            data-item-url="/"
+            data-item-description="Éthiopie Yirgacheffe, Colombie Huila et Guatemala Huehuetenango — 250g de chaque origine."
+            aria-label="Commander le Pack Trio Origines">
+            Commander ce pack
+          </button>
+        </article>
+
+        <!-- Pack 2 -->
+        <article class="pack-card pack-card--featured reveal">
+          <div class="pack-card__header">
+            <span class="pack-card__tag pack-card__tag--gold">Complet</span>
+            <h3 class="pack-card__name">Découverte Signature</h3>
+            <p class="pack-card__desc">Les 3 origines + notre assemblage maison<br />250g de chaque</p>
+          </div>
+          <ul class="pack-card__list" aria-label="Contenu du pack">
+            <li>Éthiopie Yirgacheffe 250g</li>
+            <li>Colombie Huila 250g</li>
+            <li>Guatemala Huehuetenango 250g</li>
+            <li>L'Assemblage Noir 250g</li>
+          </ul>
+          <div class="pack-card__pricing">
+            <span class="pack-card__saving">Économisez 16 €</span>
+            <div class="pack-card__prices">
+              <s class="pack-card__old-price">76 €</s>
+              <strong class="pack-card__price">60 €</strong>
+            </div>
+          </div>
+          <button
+            class="btn btn--gold btn--full snipcart-add-item"
+            data-item-id="pack-decouverte-signature"
+            data-item-name="Pack Découverte Signature — 4 × 250g"
+            data-item-price="60.00"
+            data-item-url="/"
+            data-item-description="Les 3 origines + L'Assemblage Noir, 250g de chaque. Notre sélection complète."
+            aria-label="Commander le Pack Découverte Signature">
+            Commander ce pack
+          </button>
+        </article>
+
+      </div>
+
+      <p class="packs__note reveal" aria-label="Information livraison">
+        ◇ &nbsp;Frais de port offerts dès 2 packs &nbsp;·&nbsp; Livraison sous 48h
+      </p>
+    </section>
+
+    <!-- ============================================================
+         NEWSLETTER — Brevo
+    ============================================================ -->
+    <section class="newsletter" id="newsletter" aria-label="Newsletter">
+      <div class="newsletter__inner">
+        <div class="newsletter__content reveal">
+          <p class="section-label">Newsletter</p>
+          <h2 class="newsletter__heading">Restez dans<br /><em>la boucle.</em></h2>
+          <p class="newsletter__sub">Nouveaux arrivages, guides de préparation, offres exclusives.</p>
+        </div>
+
+        <form class="newsletter__form reveal" id="newsletterForm" novalidate aria-label="Inscription newsletter">
+          <div class="newsletter__input-group">
+            <label for="newsletterEmail" class="sr-only">Votre adresse e-mail</label>
+            <input
+              type="email"
+              id="newsletterEmail"
+              name="email"
+              class="newsletter__input"
+              placeholder="votre@email.com"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
+            <button type="submit" class="btn btn--cream newsletter__submit">
+              <span class="newsletter__submit-text">S'inscrire</span>
+              <span class="newsletter__submit-loader" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="newsletter__feedback" id="newsletterFeedback" aria-live="polite" role="status"></div>
+          <p class="newsletter__privacy">Aucun spam. Désabonnement en un clic.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" aria-label="Pied de page">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__logo">SHOO</p>
+        <p class="footer__tagline">Café de spécialité.<br />Origine. Caractère.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="TikTok" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Liens footer">
+        <div class="footer__nav-col">
+          <p class="footer__nav-title">Boutique</p>
+          <a href="#boutique" class="footer__nav-link">Origines</a>
+          <a href="#boutique" class="footer__nav-link">Signature</a>
+          <a href="#packs" class="footer__nav-link">Packs découverte</a>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__nav-title">À propos</p>
+          <a href="#" class="footer__nav-link">Notre démarche</a>
+          <a href="#" class="footer__nav-link">Les producteurs</a>
+          <a href="#" class="footer__nav-link">La torréfaction</a>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__nav-title">Contact</p>
+          <a href="mailto:bonjour@shoo.coffee" class="footer__nav-link">bonjour@shoo.coffee</a>
+          <a href="#newsletter" class="footer__nav-link">Newsletter</a>
+          <a href="#" class="footer__nav-link">FAQ</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2025 SHOO Coffee · Tous droits réservés</p>
+      <div class="footer__legal">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">CGV</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Snipcart — Replace YOUR_SNIPCART_PUBLIC_API_KEY below -->
+  <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY" data-currency="eur"></div>
+  <script async src="https://cdn.snipcart.com/themes/v3.7.3/default/snipcart.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
